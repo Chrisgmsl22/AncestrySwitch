@@ -1,4 +1,5 @@
 class Node < ApplicationRecord
 
-    #has_ancestry
+    #has_ancestry jj
+    
 end
