@@ -1,2 +1,0 @@
-module NodehijosHelper
-end

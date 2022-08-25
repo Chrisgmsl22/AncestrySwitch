@@ -9,4 +9,25 @@
     <%= node.description %>
   </p>
 
+  <p>
+    <strong>Ancestry:</strong>
+    
+    <% if node.ancestors.present? %>
+      
+      <%= node.parent_id %>
+    <% else %>
+      <p>It doesnt have an ancestor</p>
+    <% end %>
+    
+      
+  </p>
+
+
+
+  <p>
+    <strong>Children</strong>
+    
+  </p>
+    
+
 </div>
