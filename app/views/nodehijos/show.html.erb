@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @nodehijo %>
+
+<div>
+  <%= link_to "Edit this nodehijo", edit_nodehijo_path(@nodehijo) %> |
+  <%= link_to "Back to nodehijos", nodehijos_path %>
+
+  <%= button_to "Destroy this nodehijo", @nodehijo, method: :delete %>
+</div>
