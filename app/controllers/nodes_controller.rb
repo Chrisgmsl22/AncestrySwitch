@@ -16,6 +16,12 @@ class NodesController < ApplicationController
     # @nodes = Node.all
   end
 
+  #New Root
+  def new_root
+    @node = Node.new
+    # @nodes = Node.all
+  end
+
   # GET /nodes/1/edit
   def edit
   end
@@ -68,4 +74,8 @@ class NodesController < ApplicationController
     def node_params
       params.require(:node).permit(:title, :description, :ancestry)
     end
+
+
+
+  
 end
