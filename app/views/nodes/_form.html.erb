@@ -21,10 +21,14 @@
     <%= form.text_field :description %>
   </div>
 
+ 
+
   <div>
-    <%= form.label :ancestry, style: "display: block" %>
-    <%= form.number_field :ancestry %>
+    <%= form.label :parent_id, style: "display: block" %>
+    <%= select("node", "ancestry", Node.all.collect {|n| [ n.title, n.id ] }, {include_blank: 'Select the parent node'}, {:class => 'form-select'}) %>
+
   </div>
+
 
   <div>
     <%= form.submit %>

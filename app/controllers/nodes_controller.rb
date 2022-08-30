@@ -13,6 +13,7 @@ class NodesController < ApplicationController
   # GET /nodes/new
   def new
     @node = Node.new
+    # @nodes = Node.all
   end
 
   # GET /nodes/1/edit

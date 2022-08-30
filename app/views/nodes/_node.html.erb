@@ -1,33 +1,46 @@
 <div id="<%= dom_id node %>">
-  <p>
-    <strong>Title:</strong>
-    <%= node.title %>
-  </p>
 
-  <p>
-    <strong>Description:</strong>
-    <%= node.description %>
-  </p>
+      <tr>
+      	<td>
+          <%= node.title %>
+          <p>(id: <%= node.id %>)</p>
+      	</td>
+      	<td>
+          <%= node.description %>
+      	</td>
+        <%# For checking if it has parents %>
+        <td>
+          <% if node.has_parent? %>
+              <%= node.parent_id %>
+              <%# <%= node.parent_id.title % > %>
+          <% else %>
+            <p>this node doesnt have a parent</p>
+          <% end %>
+        </td>
 
-  <p>
-    <strong>Ancestry:</strong>
-    
-    <% if node.ancestors.present? %>
-      
-      <%= node.parent_id %>
-    <% else %>
-      <p>It doesnt have an ancestor</p>
-    <% end %>
-    
-      
-  </p>
+        <%# For checking if the node has children %>
+        <td>        
+          <% if node.descendant_ids.present? %>
+            <%= node.descendant_ids %>
+            
+            <%# <p>(<%= node.title % >)</p> %>
+          <% else %>
+            <p>This node doesnt have any children</p>
+          <% end %>    
+
+          <%# <%= node.child_ids % >     %>
+        </td>
 
 
-
-  <p>
-    <strong>Children</strong>
-    
-  </p>
-    
-
-</div>
+        <%# For checking if the node has a parent %>
+        <td>
+          
+          <% if node.ancestors? %>
+            <%= node.ancestor_ids %>            
+            
+          <% else %>
+            <p>This node doesnt have ancestors (papa)</p>
+          <% end %>
+         
+        </td>
+        <td></td>   
