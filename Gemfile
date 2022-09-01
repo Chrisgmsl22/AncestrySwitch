@@ -53,10 +53,11 @@ gem "bootsnap", require: false
 
 
 #gem "active_storage"
-
+gem 'activestorage'
 #Para Ancestry
 gem "ancestry"
 
+gem "i18n"
 
 
 group :development, :test do

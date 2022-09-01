@@ -18,5 +18,10 @@ module Ancestry
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    
+    
+     config.time_zone = "Mexico City"
+     config.i18n.default_locale = :es #It's i18n instead i18
+     config.encoding = "utf-8"
   end
 end

@@ -234,11 +234,13 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  activestorage
   ancestry
   bootsnap
   capybara
   cssbundling-rails
   debug
+  i18n
   image_processing (~> 1.2)
   importmap-rails
   jbuilder

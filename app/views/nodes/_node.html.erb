@@ -14,20 +14,21 @@
               <%= node.parent_id %>
               <%# <%= node.parent_id.title % > %>
           <% else %>
-            <p>this node doesnt have a parent</p>
+            <p>this node doesnt have a parent, thus is a Root Node</p>
           <% end %>
         </td>
 
         <%# For checking if the node has children %>
         <td>        
-          <% if node.descendant_ids.present? %>
-            <%= node.descendant_ids %>
+          <% if node.children.present? %>
+            <%= node.child_ids %>
             
             <%# <p>(<%= node.title % >)</p> %>
           <% else %>
             <p>This node doesnt have any children</p>
           <% end %>    
-
+          <%= node.child_ids %>
+          <%# <%= node.descendants % > %>
           <%# <%= node.child_ids % >     %>
         </td>
 
@@ -42,5 +43,15 @@
             <p>This node doesnt have ancestors (papa)</p>
           <% end %>
          
+        </td>
+        <td>
+          
+          <% if node.document.attached? %>
+            <%= node.document.blob.filename %>
+          <% else %>
+            <%= t(:docEmpty) %>  
+          <% end %>
+          
+
         </td>
         <td></td>   
