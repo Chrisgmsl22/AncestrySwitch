@@ -47,7 +47,10 @@
         <td>
           
           <% if node.document.attached? %>
-            <%= node.document.blob.filename %>
+            <%# <%= node.document.blob.filename % > %>
+            <a href="<%= url_for(node.document) %>" target="_blank">
+              <%= node.document.blob.filename %>
+            </a> 
           <% else %>
             <%= t(:docEmpty) %>  
           <% end %>
@@ -55,3 +58,7 @@
 
         </td>
         <td></td>   
+
+
+        
+     
